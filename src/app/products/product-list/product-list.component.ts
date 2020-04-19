@@ -28,7 +28,7 @@ export class ProductListComponent implements OnInit {
     }
   }
 
-  public clone(product: Product){
+  private clone(product: Product){
     const p = new Product();
     p.id = product.id;
     p.name = product.name;
