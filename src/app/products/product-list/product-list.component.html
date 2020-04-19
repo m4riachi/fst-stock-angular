@@ -1,0 +1,21 @@
+<table class="table mt-5">
+  <thead>
+  <tr>
+    <th scope="col">Produit</th>
+    <th scope="col">Quantite</th>
+    <th scope="col">Prix</th>
+    <th scope="col">Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let p of products; let i = index">
+    <td>{{ p.name }}</td>
+    <td>{{ p.quantity }}</td>
+    <td>{{ p.price }}</td>
+    <td>
+      <button class="btn btn-sm btn-warning mr-2" (click)="update(p)"><i class="fa fa-pencil"></i></button>
+      <button class="btn btn-sm btn-danger" (click)="delete(p.id, i)"><i class="fa fa-trash"></i></button>
+    </td>
+  </tr>
+  </tbody>
+</table>
