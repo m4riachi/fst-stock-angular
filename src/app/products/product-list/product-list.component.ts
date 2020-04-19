@@ -23,7 +23,9 @@ export class ProductListComponent implements OnInit {
   }
 
   public delete(id: number, index: number) {
-    this.productService.delete(id, index);
+    if (confirm('Voulez-vous vraiment faire cette action?')) {
+      this.productService.delete(id, index);
+    }
   }
 
   public clone(product: Product){
