@@ -3,22 +3,32 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ProductsComponent } from './products/products.component';
-import { ProductFormComponent } from './products/product-form/product-form.component';
-import { ProductListComponent } from './products/product-list/product-list.component';
-import {FormsModule} from '@angular/forms';
+import { ClientsComponent } from './clients/clients.component';
+import { ClientFormComponent } from './clients/client-form/client-form.component';
+import { ClientListComponent } from './clients/client-list/client-list.component';
+
+import { BatsComponent } from './bats/bats.component';
+import { BatFormComponent } from './bats/bat-form/bat-form.component';
+import { BatListComponent } from './bats/bat-list/bat-list.component';
+
+import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductsComponent,
-    ProductFormComponent,
-    ProductListComponent
+    ClientsComponent,
+    ClientFormComponent,
+    ClientListComponent,
+    BatsComponent,
+    BatFormComponent,
+    BatListComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

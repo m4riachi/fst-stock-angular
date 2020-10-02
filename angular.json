@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "stock-ui"
+    }
+  },
+  "defaultProject": "stock-ui",
+  "cli": {
+    "analytics": false
+  }
 }

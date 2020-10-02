@@ -1,0 +1,19 @@
+<table class="table mt-5">
+  <thead>
+    <tr>
+      <th scope="col">Libellé</th>
+      <th scope="col">Référence</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of bats; let i = index">
+      <td>{{ p.libelle }}</td>
+      <td>{{ p.reference }}</td>
+      <td>
+        <button class="btn btn-sm btn-warning mr-2" (click)="update(p)"><i class="fa fa-pencil"></i></button>
+        <button class="btn btn-sm btn-danger" (click)="delete(p.reference, i)"><i class="fa fa-trash"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>
